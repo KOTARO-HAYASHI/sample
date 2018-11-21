@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.my-bg{
+    min-height:200px;
+    background-size:cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 3px #333;
+    border: 2px solid #000;
+}
+
+.rabbit{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Oryctolagus_cuniculus_Tasmania.jpg");
+}
+
+.chick{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e9/Chick.jpg");
+}
+
+.cat{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ae/AfricanWildCat.jpg");
+}
+/* 文章が入っているcol要素用 */
+.my-text{
+    display: flex;
+    align-items: center; 
+   height: 100%;
+}          
+
+#resp-1{
+    background-color: red;
+}
+.container{
+    margin: 0px;
+}

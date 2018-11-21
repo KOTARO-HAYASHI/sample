@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+.transition-sample-2{
+  width: 240px;
+  height: 100px;
+  background-color:blue;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: auto;
+  padding: 0;
+
+  display: block;
+  border-radius: 15px;
+  letter-spacing: 5px;
+
+  transition-duration :1s;
+ 
+}
+
+/*transition-propertyがわからん*/
+
+
+.transition-sample-2:hover{
+    color: blue;
+    background-color: white;
+    transition-property:border;
+    transition-duration: 0.5s;
+    border: 10px solid blue;
+    transition-timing-function:linear;
+
+    
+}
+
+
+/*戻りが一瞬ではないのと回答と書いてるコードの量が違うし書いてるところが違う問題が発生している*/
+.transition-sample-3{
+    width: 240px;
+    height: 100px;
+    background-color:blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: auto;
+    padding: 0;
+  
+    display: block;
+    border-radius: 15px;
+    letter-spacing: 5px;
+  
+    transition-duration :0.3s;
+    text-shadow:3px 3px 3px gray;
+   
+  }
+
+  .transition-sample-3:hover{
+      color:black;
+    text-shadow:3px 3px 3px white;
+      
+  }
+
+
+  .transform-sample-1{
+    width: 240px;
+    height: 100px;
+    background-color:blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    padding: 0;
+  
+    display: block;
+    border-radius: 15px;
+    letter-spacing: 5px;
+  
+    transition-duration :1s;
+    
+  }
+
+.transform-sample-1:hover{
+    transform:translateX(400px);
+    transition-timing-function: ease;
+
+}
+/*50%だとボタンの大きさに対する50%しか移動しなかった。いい方法は？*/
+
+.transform-sample-2{
+    width: 240px;
+    height: 100px;
+    background-color:blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    padding: 0;
+  
+    display: block;
+    border-radius: 15px;
+    letter-spacing: 5px;
+  
+    transition-duration :1s;
+    
+  }
+
+  .transform-sample-2:hover{
+    transform:translateX(400px);
+    transition-timing-function: ease-in;
+
+}
+
+  .transform-sample-3{
+    width: 240px;
+    height: 100px;
+    background-color:blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    padding: 0;
+  
+    display: block;
+    border-radius: 15px;
+    letter-spacing: 5px;
+  
+    transition-duration :1s;
+    
+  }
+
+  .transform-sample-3:hover{
+    transform:translateX(400px);
+    transition-timing-function: ease-out;
+
+}
+
+  .transform-sample-4{
+    width: 240px;
+    height: 100px;
+    background-color:blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    padding: 0;
+  
+    display: block;
+    border-radius: 15px;
+    letter-spacing: 5px;
+  
+    transition-duration :1s;
+    
+  }
+
+  .transform-sample-4:hover{
+    transform:translateX(400px);
+    transition-timing-function: ease-in-out;
+
+}
+
+  .transform-sample-5{
+    width: 240px;
+    height: 100px;
+    background-color:blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    padding: 0;
+  
+    display: block;
+    border-radius: 15px;
+    letter-spacing: 5px;
+  
+    transition-duration :1s;
+    
+  }
+  .transform-sample-5:hover{
+    transform:translateX(400px);
+    transition-timing-function: liner;
+
+}
+
+.transform-sample6-wrapper{
+    padding:200px;
+    position: relative;
+
+}
+
+.transform-sample-6{
+    width: 50px;
+    height: 50px;
+   border-radius: 25px;
+   background-color: green;
+   position: absolute;
+   
+}
+
+.transform-sample-6:nth-of-type(1){
+    transform:scale(2,2);
+    transition-duration:1s;
+}
+
+.transform-sample-6:nth-of-type(2){
+    
+    transform: scale(4,4);
+    transition-duration:-1s;
+}
+
+.transform-sample-7-wrapper{
+   
+    display: flex;
+}
+
+.transform-sample-7 {
+    display: inline-block;
+    width: 100px;
+
+    height: 100px;
+    border-radius: 50%;
+    background-color: red;
+font-size: 30px;
+color:white;
+text-align: center;
+line-height: 100px;
+transition-duration: 3s;
+transition-timing-function: ease-out;
+}
+
+
+.transform-sample-7-wrapper:hover .rotateX{
+    transform: rotateX(1800deg);
+
+    
+}
+
+.transform-sample-7-wrapper:hover .rotateY{
+    transform: rotateY(1800deg);
+
+}
+
+.transform-sample-7-wrapper:hover .rotateZ{
+transform: rotateZ(1800deg);
+}
+
+
+.animation-sample-1-wrapper{
+    width: 100%;
+    margin: auto;
+    padding: 100px;
+}
+
+.animation-sample-1 {
+    display: inline-block;
+    width: 100px;
+
+    height: 100px;
+    border-radius: 50%;
+background-color:rgb(50,150,250);
+font-size: 30px;
+color:white;
+text-align: center;
+line-height: 100px;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-name:rotating;
+}
+
+@keyframes rotating{
+    0%{
+        transform:scale(.3);
+    }
+    50%{
+        transform:scale(.6) rotate(-180deg);
+        background-color:rgb(150,250,50);
+       
+    }
+    100%{
+        transform:scale(1) rotate(360deg);
+        background-color:rgb(250,50,150);
+       
+    }
+}
+
+label{
+    color: white;
+    background-color:blue;
+}

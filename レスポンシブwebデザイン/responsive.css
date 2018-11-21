@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+
+@media(max-width:991px){
+    #menu-B img{
+        width: 50%;
+    }
+    footer img{
+        width: 50%;
+    }
+
+    /*なんか要素が一列に並んのよなぁ...*/
+
+}
+
+@media(max-width:768px){
+    nav li{
+        display:none;
+    }
+    .main-text{
+        width: 90%;
+    }
+    .btn{
+        display:block;
+    }
+
+    .menu-b{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+
+    #menu-B img{
+        width: 100%;
+    }
+.rabbits img{
+    width: 50%;
+
+}
+
+}
+
+
+/*めんどくさいのはこれらを指定の上下によっていろいろ狩ること....*/
+/*疑問部分はmenu-bにおける画像と文字の関係性*/

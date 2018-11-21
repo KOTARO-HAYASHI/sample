@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+*{
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    height: 50px;
+   display: flex;
+   align-items: center;
+   background-color: green;
+
+}
+nav h1{
+    padding-left: 15px;
+    margin: 0px;
+    width: 30%;
+}
+
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+ nav li{
+    padding-left: 10px;
+ }
+
+
+ /*main部分*/
+
+ .main-content{
+     height: 500px;
+     background-size: cover;
+     background-image: url("file:///Users/KOTARO/Downloads/codeship%20html%E5%9F%BA%E7%A4%8E%20img/6.jpg");
+     background-position:center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+ }
+
+ .main-text{
+     /*wが767以上の時*/
+     width: 720px;
+     height: 400px;
+     background-color:white;
+     opacity: 0.7;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+#menu-A{
+    height: 25%;
+}
+
+.three{
+     display: flex;
+     justify-content:space-around;
+     align-items: center;
+background-color: #00C79D;
+
+ }
+
+.three img{
+width: 30%;
+display: flex;
+margin: 5px;
+
+
+ }
+
+ #menu-B{
+     width: 100%;
+ }
+
+ #menu-B h3{
+     height: 125px;
+     background-color:#00B190;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color:white;
+     margin: 0;
+ }
+
+
+.btn{
+     display: flex;   
+ }
+
+.btn img{
+width: 60%;
+height: 40%;
+}
+
+
+.btn div{
+     display: flex;
+     flex-direction: column;
+ }
+
+ .btn p{
+     margin: 5px;
+     
+ }
+
+.menu-b{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+
+ 
+.rabbtis{
+    width: 100%;
+}
+
+.rabbits h5{
+  
+    background-color: #00B190;
+ height: 122px;
+ color: white;   
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 18px;
+
+}
+
+.rabbits-b{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rabbits-b img{
+    width: 25%;
+    height: 25%;
+}

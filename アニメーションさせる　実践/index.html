@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="s10w">
+        <button class="btn-1">First</button>
+        <button class="btn-1">First</button>
+        <button class="btn-1">First</button>
+        <button>Second</button>
+        <button>Second</button>
+        <button>Second</button>
+        <button>Third<span><span>Third</span></span></button>
+        <button>Third<span><span>Third</span></span></button>
+        <button>Third<span><span>Third</span></span></button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/color/jquery.color-2.1.2.js" integrity="sha256-1Cn7TdfHiMcEbTuku97ZRSGt2b3SvZftEIn68UMgHC8="
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // 以下のものは変数と呼ばれるもので値や文字列を格納しておくことができるものです。
+            var duration = 300,
+                defaultColor = '#3498DB',
+                changeColor = '#ae5e9b',
+                defaultBorderWidth = '0px',
+                changeBorderWidth = '12px';
+            /* First */
+            $(".s10w button:nth-child(n+1):nth-child(-n+3)").on({
+                "mouseover": function () {
+                    $(this).stop(true).animate({
+                        backgroundColor: changeColor,
+                    }, duration)
+                }
+            })
+            // 省略
+            /* Second */
+            // 次の記述では先頭の要素から順に4つから6つまでの要素を選択します。jQueryの機能ではなくCSSセレクタの応用です。
+            $(".s10w button:nth-child(n+4):nth-child(-n+6)").on({
+                'mouseover': function () {
+                    $(this).stop(true).animate({
+                        borderWidth: changeBorderWidth,
+                        color: changeColor,
+                        backgroundColor: 'white'
+                    }, duration)
+                },
+                'mouseout': function () {
+                    $(this).stop(true).animate({
+                        borderWidth: defaultBorderWidth,
+                        color: 'white',
+                        backgroundColor: defaultColor
+                    }, duration)
+                }
+            });
+            /* Third */
+            // 省略
+        });
+    </script>
+    <script>
+        $(function () {
+            // 以下のものは変数と呼ばれるもので値や文字列を格納しておくことができるものです。
+            var duration = 300,
+                defaultColor = '#3498DB',
+                changeColor = '#ae5e9b',
+                defaultBorderWidth = '0px',
+                changeBorderWidth = '12px';
+            /* First */
+            $(".s10w button:nth-child(n+1):nth-child(-n+3)").on({
+                "mouseover": function () {
+                    $(this).stop(true).animate({
+                        backgroundColor: changeColor,
+
+                    }, duration)
+                },
+                "mouseout": function () {
+                    $(this).stop(true).animate({
+                        backgroundColor: defaultColor
+                    }, duration)
+                }
+            });
+            // 省略
+            /* Second */
+            // 次の記述では先頭の要素から順に4つから6つまでの要素を選択します。jQueryの機能ではなくCSSセレクタの応用です。
+            $(".s10w button:nth-child(n+4):nth-child(-n+6)").on({
+                'mouseover': function () {
+                    $(this).stop(true).animate({
+                        borderWidth: changeBorderWidth,
+                        color: changeColor,
+                        backgroundColor: 'white',
+                    }, duration)
+                },
+                'mouseout': function () {
+                    $(this).stop(true).animate({
+                        borderWidth: defaultBorderWidth,
+                        color: 'white',
+                        backgroundColor: defaultColor
+                    }, duration)
+                }
+            });
+            /* Third */
+            // 省略
+            $(".s10w button:nth-child(n+7):nth-child(-n+9)").on({
+                "mouseover": function () {
+                    $(this).find(">span").stop(true).animate({
+                        width: "100%",
+
+                    })
+                },
+                "mouseout": function () {
+                    $(this).find(">span").stop(true).animate({
+                        width: "0"
+                    })
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

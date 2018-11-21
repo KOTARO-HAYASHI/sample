@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="sample">
+        Sample
+    </div>
+
+    <div class="click-me">
+        Click me
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".sample").css({
+                width: "900px",
+                fontSize: "60px",
+                color: "yellow",
+                backgroundColor: "purple",
+                transform: "rotateZ(-10deg)",
+            })
+        });
+        $(function () {
+            $(".click-me").css({
+                width: "200px",
+                backgroundColor: "blue",
+                borderRadius: "50px"
+            })
+        });
+
+        $(".click-me").on({
+
+        })
+        // targetクラスがついた要素がmouseover(マウスオーバー)されたら、その要素がactiveクラスを持っていなければその要素にactiveクラスを付加し、持っていれば除去するプログラム
+        $(function () {
+            // mouseoverメソッドでmouseoverをトリガーとしてセットできます。
+            // 他のイベントをトリガーにしたい場合も同様にscrollであれば$("div").scroll(function(){})のようにすれば問題ありません。
+            $(".target").mouseover(function () {
+                // $(this)とすると、targetクラスがついている要素の内、mouseoverされた要素のみを選択できます。
+                // toggleClass(className) : 選択した要素が指定したクラスを持っていれば除去し、持っていなければ付加するメソッド。関連メソッド：addClass(className), removeClass(className)
+                $(this).toggleClass("active");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

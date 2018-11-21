@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="sample-kw">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script   src="https://code.jquery.com/color/jquery.color-2.1.2.js"   integrity="sha256-1Cn7TdfHiMcEbTuku97ZRSGt2b3SvZftEIn68UMgHC8="
+          crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            var $container = $(".sample-kw"),
+                $contents = $(".sample-kw>div"),
+                /* .lengthとするとその要素数を取得することができます。
+                    例えばこのサンプルのHTMLにおいて$("div").lengthは16という数値を返します。 */
+                length = $contents.length;
+            /*console.log($contents)
+            console.log(length)ここの部分がデバック要素*/
+            /*あーー上三つは定義だ。*/
+            /* 色のついた要素の容れ物となるdivに一定以上の高さがないと、色のついた要素ははみ出してしまいます。
+               今回は中身の要素がちょうどぴったり入る高さを指定してあげましょう。ヒント：掛け算を使う。*/
+            $container.css({ height: length * 10 + "px" });
+            /* 以下のfor (var i = 0; i < j; i++){} というものはfor文と呼ばれるものです。
+               iがjより小さい間、初期値0から毎度iに+1しながら{}内の処理を繰り返すというものです。 
+               このサンプルにおいてふさわしいものjの位置に記述してください。*/
+            for (var i = 0; i < length; i++) {
+                /* .eq(i)というメソッドは複数個ある要素の中から特定の順番のもののみを操作するときに便利です。
+                    例えば$("div").eq(5).css({backgroundColor,'red'})とすると6番目のdivの背景色が赤になります。
+                    （注意）iは0始まりなので1番目は$("div").eq(0)、2番目は$("div").eq(1)となります。*/
+                $contents.eq(i).css({
+                    /* 10px x 10pxの要素が綺麗に並ぶように式を記述してください。
+                       ヒント：for文の{}内では処理が行われる度に加算されていくiを利用することができます。*/
+                    top: i * 10 + "px",
+                    left: i * 10 + "px"
+                });
+            }
+        });    
+    </script>
+
+</body>
+
+</html>

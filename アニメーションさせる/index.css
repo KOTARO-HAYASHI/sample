@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.sample-btn {
+    color: white;
+    background-color: #3498DB;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 30px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+    transition: 1s;
+}
+

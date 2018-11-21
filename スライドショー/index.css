@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+  }
+  
+  ul,
+  li {
+    text-decoration: none;
+    -webkit-padding-start: 0;
+  }
+  
+  a,
+  a:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .slideshow {
+    height: 30vw;
+    min-width: 100%;
+    overflow: hidden;
+    /*はいり切らない要素は隠す*/
+    position: relative;
+    /*ここ最初absoluteだったけど、実際はrelativeで反応してるし、実際はabsoluteさせるためにはrelative必要なんじゃないの？*/
+  }
+  
+  .slideshow-slides {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .slideshow-slides .slide {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .slideshow-slides .slide img {
+    position: absolute;
+  }
+  
+  .slideshow-nav a,
+  .slideshow-indicator a {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .slideshow-nav a {
+    position: absolute;
+    top: 42%;
+    color: white;
+    font-size: 2em;
+  }
+  
+  .slideshow-nav a.prev {
+    left: 50px;
+  }
+  
+  .slideshow-nav a.next {
+    right: 50px;
+  }
+  
+  .slideshow-nav a.disabled {
+    display: none;
+  }
+  
+  .slideshow-indicator {
+    bottom: 30px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
+  
+  .slideshow-indicator a {
+    display: inline-block;
+    width: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .slideshow-indicator a.active {
+    cursor: default;
+    background-color: #ccc;
+  }
+  
+  .slideshow-indicator a:before {
+    margin-left: -110px;
+  }
+  
+  .slideshow-indicator a.active:before {
+    margin-left: -130px;
+  }
+  
